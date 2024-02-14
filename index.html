@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+    <head>
+        <script src="https://kit.fontawesome.com/8de56e2116.js"
+            crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Papelito Dashboard</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+            integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <link rel="icon" type="image/png" href="/assets/logo-face.png">
+
+    </head>
+
+    <body>
+
+        <div class="navbar">
+            <img class="imgLogo" src="/assets/LOGO-Papelito.png"
+                alt="Logo Papelito">
+            <div class="CenterContainerNavbar">
+                <h1 class="dashboard-title"> DashBoard Objetivos</h1>
+            </div>
+        </div>
+
+        <div class="linhaNavbar"></div>
+
+        <div class="bodyContent">
+            <div class="BoxGra card" id="meuBotao">
+                <span class="BoxGraTitle" id="titulonarrativa1"></span>
+                <div class="ProPorcen">
+                    <div class="progress-containerSub complproW">
+                        <div class="ui indicating progress complproH"
+                            id="AmediaProgressBar">
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                    <div class="progress-text" id="AmediaProgressText"></div>
+                </div>
+
+                <div class="SizedBox"></div>
+
+                <div class="SubProContainers">
+                    <div class="SubProBar">
+                        <div
+                            style="display: flex; align-items: center; flex-direction: column;">
+                            <h1 class="BoxGraSubTitle"
+                                id="textocompromissoA1"></h1>
+                            <div class="ProPorcenSub">
+                                <div class="progress-containerSub">
+                                    <div class="ui indicating progress"
+                                        id="AprogressBar1">
+                                        <div class="bar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress-textsub"
+                                id="AprogressText1"></div>
+                        </div>
+                        <div class="Graficolinha">
+
+                            <div>
+                                <canvas id="myChart1" width="210px"></canvas>
+                            </div>
+
+                            <script
+                                src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                            <script>
+
+
+                            const datasets = {
+                                    Adata1: [
+                                        {
+                                          
+                                            "data": "Set. :",
+                                            "value": 2347
+                                        },
+                                        {
+                                            "data": "Out. :",
+                                            "value": 1535
+                                        },
+                                        {
+                                            "data": "Nov. :",
+                                            "value": 3672
+                                        },
+                                        {
+                                            "data": "Dez. :",
+                                            "value": 2890
+                                        },
+                                        {
+                                            "data": "Jan. :",
+                                            "value": 1145
+                                        },
+                                        {
+                                            "data": "Fev. :",
+                                            "value": 2988
+                                        }
+                                    ],
+                                    Adata2: [
+                                    {
+
+                                        "data": "Set. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Out. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Nov. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Dez. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Jan. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Fev. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    }
+                                ],
+                                 Adata3: [
+                                    {
+
+                                        "data": "Set. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Out. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Nov. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Dez. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Jan. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Fev. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    }
+                                ],
+                                Adata4: [
+                                    {
+
+                                        "data": "Set. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Out. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Nov. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Dez. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Jan. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Fev. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    }
+                                ],
+                                Bdata1: [
+                                    {
+
+                                        "data": "Set. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Out. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Nov. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Dez. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Jan. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Fev. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    }
+                                ],
+                                 Bdata2: [
+                                    {
+
+                                        "data": "Set. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Out. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Nov. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Dez. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Jan. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Fev. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    }
+                                ],
+                                 Bdata3: [
+                                    {
+
+                                        "data": "Set. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Out. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Nov. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Dez. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Jan. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Fev. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    }
+                                ],
+                                 Bdata4: [
+                                    {
+
+                                        "data": "Set. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Out. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Nov. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Dez. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Jan. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Fev. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    }
+                                ],
+                                Cdata1: [
+                                    {
+
+                                        "data": "Set. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Out. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Nov. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Dez. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Jan. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Fev. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    }
+                                ],
+                                 Cdata2: [
+                                    {
+
+                                        "data": "Set. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Out. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Nov. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Dez. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Jan. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    },
+                                    {
+                                        "data": "Fev. :",
+                                        "value": Math.floor(Math.random() * (4000 - 0 + 1)) + 0
+                                    }
+                                ],
+                                
+                                };
+
+                            const ctx1 = document.getElementById('myChart1');
+                            Chart.defaults.font.size = 8;   
+
+                            new Chart(ctx1, {
+                                type: 'line',
+                                data: {
+                                    labels: datasets.Adata1.map(item => `${item.data} ${item.value}`),
+                                    datasets: [{
+                                        label: 'V. M.',
+                                        data: datasets.Adata1.map(item => item.value),
+                                        fill: false,
+                                        borderWidth: 0.5,
+                                        tension: 0.3
+                                    }]
+                                },
+                                options: {
+                                    scales: {
+                                        
+                                        y: {
+                                            
+                                            beginAtZero: true
+                                        }
+                                    }
+                                }
+                            });
+                        </script>
+                        </div>
+                    </div>
+
+                    <div class="SubProBar">
+                        <div
+                            style="display: flex; align-items: center; flex-direction: column;">
+                            <h1 class="BoxGraSubTitle"
+                                id="textocompromissoA2"></h1>
+                            <div class="ProPorcenSub">
+                                <div class="progress-containerSub">
+                                    <div class="ui indicating progress"
+                                        id="AprogressBar2">
+                                        <div class="bar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress-textsub"
+                                id="AprogressText2"></div>
+                        </div>
+                        <div class="Graficolinha">
+
+                            <div>
+                                <canvas id="myChart2" width="210px"></canvas>
+                            </div>
+
+                            <script
+                                src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                            <script>
+                            const ctx2 = document.getElementById('myChart2');
+                            Chart.defaults.font.size = 8;
+
+                            new Chart(ctx2, {
+                                type: 'line',
+                                data: {
+                                    labels: datasets.Adata2.map(item => `${item.data} ${item.value}`),
+                                    datasets: [{
+                                        label: 'V. M.',
+                                        data: datasets.Adata2.map(item => item.value),
+                                        fill: false,
+                                        borderWidth: 0.5,
+                                        tension: 0.3
+                                    }]
+                                },
+                                options: {
+                                    scales: {
+                                        y: {
+
+                                            beginAtZero: true
+                                        }
+                                    }
+                                }
+                            });
+                        </script>
+                        </div>
+                    </div>
+
+                    <div class="SubProBar">
+                        <div
+                            style="display: flex; align-items: center; flex-direction: column;">
+                            <h1 class="BoxGraSubTitle"
+                                id="textocompromissoA3"></h1>
+                            <div class="ProPorcenSub">
+                                <div class="progress-containerSub">
+                                    <div class="ui indicating progress"
+                                        id="AprogressBar3">
+                                        <div class="bar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress-textsub"
+                                id="AprogressText3"></div>
+                        </div>
+                        <div class="Graficolinha">
+
+                            <div>
+                                <canvas id="myChart3" width="210px"></canvas>
+                            </div>
+
+                            <script
+                                src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                            <script>
+                            const ctx3 = document.getElementById('myChart3');
+                            Chart.defaults.font.size = 8;
+
+                            new Chart(ctx3, {
+                                type: 'line',
+                                data: {
+                                    labels: datasets.Adata3.map(item => `${item.data} ${item.value}`),
+                                    datasets: [{
+                                        label: 'V. M.',
+                                        data: datasets.Adata3.map(item => item.value),
+                                        fill: false,
+                                        borderWidth: 0.5,
+                                        tension: 0.3
+                                    }]
+                                },
+                                options: {
+                                    scales: {
+                                        y: {
+
+                                            beginAtZero: true
+                                        }
+                                    }
+                                }
+                            });
+                        </script>
+                        </div>
+                    </div>
+
+                    <div class="SubProBar">
+                        <div
+                            style="display: flex; align-items: center; flex-direction: column;">
+                            <h1 class="BoxGraSubTitle"
+                                id="textocompromissoA4"></h1>
+                            <div class="ProPorcenSub">
+                                <div class="progress-containerSub">
+                                    <div class="ui indicating progress"
+                                        id="AprogressBar4">
+                                        <div class="bar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress-textsub"
+                                id="AprogressText4"></div>
+                        </div>
+                        <div class="Graficolinha">
+
+                            <div>
+                                <canvas id="myChart4" width="210px"></canvas>
+                            </div>
+
+                            <script
+                                src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                            <script>
+                            const ctx4 = document.getElementById('myChart4');
+                            Chart.defaults.font.size = 8;
+
+                            new Chart(ctx4, {
+                                type: 'line',
+                                data: {
+                                    labels: datasets.Adata4.map(item => `${item.data} ${item.value}`),
+                                    datasets: [{
+                                        label: 'V. M.',
+                                        data: datasets.Adata4.map(item => item.value),
+                                        fill: false,
+                                        borderWidth: 0.5,
+                                        tension: 0.3
+                                    }]
+                                },
+                                options: {
+                                    scales: {
+                                        y: {
+
+                                            beginAtZero: true
+                                        }
+                                    }
+                                }
+                            });
+                        </script>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="SizedBoxW"></div>
+
+            <div>
+                <div class="BoxGra card" id="meuBotao2">
+                    <div style="
+    display: flex;
+    flex-direction: column;
+">
+                        <span class="BoxGraTitle" id="titulonarrativa2"></span>
+                        <div class="ProPorcen">
+                            <div class="progress-containerSub complproW3">
+                                <div class="ui indicating progress complproH"
+                                    id="BmediaProgressBar">
+                                    <div class="bar"></div>
+                                </div>
+                            </div>
+                            <div class="progress-text"
+                                id="BmediaProgressText"></div>
+                        </div>
+                    </div>
+
+                    <div style="
+    display: flex;
+">
+
+                        <div class="meuBotao2class">
+                            <div class="SubProBar">
+                                <div
+                                    style="display: flex; align-items: center; flex-direction: column;">
+                                    <h1 class="BoxGraSubTitle"
+                                        id="textocompromissoB1"></h1>
+                                    <div class="ProPorcenSub">
+                                        <div class="progress-containerSub">
+                                            <div class="ui indicating progress"
+                                                id="BprogressBar1">
+                                                <div class="bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-textsub"
+                                        id="BprogressText1"></div>
+                                </div>
+                                <div class="Graficolinha">
+
+                                    <div>
+                                        <canvas id="BmyChart1"
+                                            width="210px"></canvas>
+                                    </div>
+
+                                    <script
+                                        src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                                    <script>
+                const Bctx1 = document.getElementById('BmyChart1');
+                Chart.defaults.font.size = 8;
+
+                new Chart(Bctx1, {
+                    type: 'bar',
+                    data: {
+                        labels: datasets.Bdata1.map(item => `${item.data} ${item.value}`),
+                        datasets: [{
+                            label: 'V. M.',
+                            data: datasets.Bdata1.map(item => item.value),
+                            fill: false,
+                            borderWidth: 0.5,
+                            tension: 0.3
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
+                                </div>
+                            </div>
+                            <div class="SubProBar">
+                                <div
+                                    style="display: flex; align-items: center; flex-direction: column;">
+                                    <h1 class="BoxGraSubTitle"
+                                        id="textocompromissoB2"></h1>
+                                    <div class="ProPorcenSub">
+                                        <div class="progress-containerSub">
+                                            <div class="ui indicating progress"
+                                                id="BprogressBar2">
+                                                <div class="bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-textsub"
+                                        id="BprogressText2"></div>
+                                </div>
+                                <div class="Graficolinha">
+
+                                    <div>
+                                        <canvas id="BmyChart2"
+                                            width="210px"></canvas>
+                                    </div>
+
+                                    <script
+                                        src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                                    <script>
+                const Bctx2 = document.getElementById('BmyChart2');
+                Chart.defaults.font.size = 8;
+
+                new Chart(Bctx2, {
+                    type: 'bar',
+                    data: {
+                        labels: datasets.Bdata2.map(item => `${item.data} ${item.value}`),
+                        datasets: [{
+                            label: 'V. M.',
+                            data: datasets.Bdata2.map(item => item.value),
+                            fill: false,
+                            borderWidth: 0.5,
+                            tension: 0.3
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="SubProContainers">
+                            <div class="SubProBar">
+                                <div
+                                    style="display: flex; align-items: center; flex-direction: column;">
+                                    <h1 class="BoxGraSubTitle"
+                                        id="textocompromissoB3"></h1>
+                                    <div class="ProPorcenSub">
+                                        <div class="progress-containerSub">
+                                            <div class="ui indicating progress"
+                                                id="BprogressBar3">
+                                                <div class="bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-textsub"
+                                        id="BprogressText3"></div>
+                                </div>
+                                <div class="Graficolinha">
+
+                                    <div>
+                                        <canvas id="BmyChart3"
+                                            width="210px"></canvas>
+                                    </div>
+
+                                    <script
+                                        src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                                    <script>
+                                            const Bctx3 = document.getElementById('BmyChart3');
+                                            Chart.defaults.font.size = 8;
+
+                                            new Chart(Bctx3, {
+                                                type: 'bar',
+                                                data: {
+                                                    labels: datasets.Bdata3.map(item => `${item.data} ${item.value}`),
+                                                    datasets: [{
+                                                        label: 'V. M.',
+                                                        data: datasets.Bdata3.map(item => item.value),
+                                                        fill: false,
+                                                        borderWidth: 0.5,
+                                                        tension: 0.3
+                                                    }]
+                                                },
+                                                options: {
+                                                    scales: {
+                                                        y: {
+
+                                                            beginAtZero: true
+                                                        }
+                                                    }
+                                                }
+                                            });
+                                        </script>
+                                </div>
+                            </div>
+
+                            <div class="SubProBar">
+                                <div
+                                    style="display: flex; align-items: center; flex-direction: column;">
+                                    <h1 class="BoxGraSubTitle"
+                                        id="textocompromissoB4"></h1>
+                                    <div class="ProPorcenSub">
+                                        <div class="progress-containerSub">
+                                            <div class="ui indicating progress"
+                                                id="BprogressBar4">
+                                                <div class="bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-textsub"
+                                        id="BprogressText4"></div>
+                                </div>
+                                <div class="Graficolinha">
+
+                                    <div>
+                                        <canvas id="BmyChart4"
+                                            width="210px"></canvas>
+                                    </div>
+
+                                    <script
+                                        src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                                    <script>
+                                            const Bctx4 = document.getElementById('BmyChart4');
+                                            Chart.defaults.font.size = 8;
+
+                                            new Chart(Bctx4, {
+                                                type: 'bar',
+                                                data: {
+                                                    labels: datasets.Bdata4.map(item => `${item.data} ${item.value}`),
+                                                    datasets: [{
+                                                        label: 'V. M.',
+                                                        data: datasets.Bdata4.map(item => item.value),
+                                                        fill: false,
+                                                        borderWidth: 0.5,
+                                                        tension: 0.3
+                                                    }]
+                                                },
+                                                options: {
+                                                    scales: {
+                                                        y: {
+
+                                                            beginAtZero: true
+                                                        }
+                                                    }
+                                                }
+                                            });
+                                        </script>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="SizedBoxW"></div>
+
+                <div class="BoxGra card" style="display: flex;
+    flex-direction: column !important;
+    width: 65rem !important;
+    height: 22rem !important;">
+
+                    <div style="
+    display: flex;
+    flex-direction: column;
+">
+                        <span class="BoxGraTitle" id="titulonarrativa3"></span>
+                        <div class="ProPorcen">
+                            <div class="progress-containerSub complproW3">
+                                <div class="ui indicating progress complproH"
+                                    id="CmediaProgressBar">
+                                    <div class="bar"></div>
+                                </div>
+                            </div>
+                            <div class="progress-text"
+                                id="CmediaProgressText"></div>
+                        </div>
+                    </div>
+
+                    <div class="SubProContainers" style="
+    flex-direction: row;
+    display: flex;
+">
+                        <div class="SubProBar">
+                            <div
+                                style="display: flex; align-items: center; flex-direction: column;">
+                                <h1 class="BoxGraSubTitle"
+                                    id="textocompromissoC1"></h1>
+                                <div class="ProPorcenSub">
+                                    <div class="progress-containerSub">
+                                        <div class="ui indicating progress"
+                                            id="CprogressBar1">
+                                            <div class="bar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progress-textsub"
+                                    id="CprogressText1"></div>
+                            </div>
+                            <div class="Graficolinha">
+
+                                <div>
+                                    <canvas id="CmyChart1"
+                                        width="200px"></canvas>
+                                </div>
+
+                                <script
+                                    src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                                <script>
+                            const Cctx1 = document.getElementById('CmyChart1');
+                            Chart.defaults.font.size = 8;
+
+                            new Chart(Cctx1, {
+                                type: 'polarArea',
+                                data: {
+                                    labels: datasets.Cdata1.map(item => `${item.data} ${item.value}`),
+                                    datasets: [{
+                                        label: 'V. M.',
+                                        data: datasets.Cdata1.map(item => item.value),
+                                    
+                                        fill: false,
+                                        borderWidth: 0.5,
+                                        tension: 0.3
+                                    }]
+                                },
+                                options: {
+                                    scales: {
+                                        y: {
+
+                                            beginAtZero: true
+                                        }
+                                    }
+                                }
+                            });
+                        </script>
+                            </div>
+                        </div>
+
+                        <div class="SubProBar">
+                            <div
+                                style="display: flex; align-items: center; flex-direction: column;">
+                                <h1 class="BoxGraSubTitle"
+                                    id="textocompromissoC2"></h1>
+                                <div class="ProPorcenSub">
+                                    <div class="progress-containerSub">
+                                        <div class="ui indicating progress"
+                                            id="CprogressBar2">
+                                            <div class="bar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progress-textsub"
+                                    id="CprogressText2"></div>
+                            </div>
+                            <div class="Graficolinha">
+
+                                <div>
+                                    <canvas id="CmyChart2"
+                                        width="210px"></canvas>
+                                </div>
+
+                                <script
+                                    src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                                <script>
+                            const Cctx2 = document.getElementById('CmyChart2');
+                            Chart.defaults.font.size = 8;
+
+                            new Chart(Cctx2, {
+                                type: 'doughnut',
+                                data: {
+                                    labels: datasets.Cdata1.map(item => `${item.data} ${item.value}`),
+                                    datasets: [{
+                                        label: 'V. M.',
+                                        data: datasets.Cdata1.map(item => item.value),
+                                        fill: false,
+                                        borderWidth: 0.5,
+                                        tension: 0
+                                    }]
+                                },
+                                options: {
+                                    scales: {
+                                        y: {
+
+                                            beginAtZero: true
+                                        }
+                                    }
+                                }
+                            });
+                        </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+        const jsonData = {
+            "titulo": [{
+                "barraprogresso": "Impulsionando Vendas: Aceleração Rápida para uma Base Sólida no 1° Trimestre e Sucesso Anual",
+            },
+            {
+                "barraprogresso": "Promover a adesão dos clientes ao nosso plano para alcançar os objetivos de distribuição e vendas.",
+            },
+            {
+                "barraprogresso": "Estabelecendo Parcerias Estratégicas: Expandindo nossa Rede de Alianças para Impulsionar o Crescimento e a Inovação",
+            },
+            ],
+
+
+            "salesData0": [
+                {
+                    "compromisso": "Vender x milhões de livretos de papel",
+                    "objetivo": "3878",
+                    "nome": "PAPELITO TRADICIONAL KING SIZE - 50 LIVRETOS",
+                    "vlrvendas": "1899",
+
+                },
+                {
+
+                    "compromisso": "Vender x milhões de bags de filtro",
+                    "objetivo": "3211",
+                    "nome": "KEEP ROLLING CLASSIC KING SIZE - 40 LIVRETOS",
+                    "vlrvendas": "2483",
+                },
+                {
+
+                    "compromisso": "Fazer 95 dos 100 maiores clientes baterem a meta trimestral",
+                    "objetivo": "3607",
+                    "nome": "PAPELITO TRADIC. C/ PITEIRA KING SIZE - 24 LIVRETOS",
+                    "vlrvendas": "1794",
+                },
+                {
+
+                    "compromisso": "Rodar campanha no 1° trimestre com x número de clientes",
+                    "objetivo": "100",
+                    "nome": "PAPELITO TRADIC. C/ PITEIRA KING SIZE - 24 LIVRETOS",
+                    "vlrvendas": "100",
+                },
+                
+            ],
+            "salesData1": [
+                {
+                    "compromisso": "Apresentar e fechar plano com os 120 maiores clientes",
+                    "objetivo": "100",
+                    "nome": "PAPELITO TRADICIONAL KING SIZE - 50 LIVRETOS",
+                    "vlrvendas": "10",
+
+                },
+                {
+
+                    "compromisso": "Equipe de vendas visitar pessoalmente 60 clientes",
+                    "objetivo": "400000",
+                    "nome": "KEEP ROLLING CLASSIC KING SIZE - 40 LIVRETOS",
+                    "vlrvendas": "331559.4",
+                },
+                {
+
+                    "compromisso": "Fazer treinamento presencial com 15 distribuidores no 1° Trimestre",
+                    "objetivo": "100",
+                    "nome": "PAPELITO TRADIC. C/ PITEIRA KING SIZE - 24 LIVRETOS",
+                    "vlrvendas": "90",
+                },
+                {
+
+                    "compromisso": "Fazer rotas em 15 clientes no 1° Trimestre",
+                    "objetivo": "100",
+                    "nome": "PAPELITO TRADIC. C/ PITEIRA KING SIZE - 24 LIVRETOS",
+                    "vlrvendas": "30",
+                },
+
+            ],
+            "salesData2": [
+                {
+                    "compromisso": "Realizar sessões de demonstração em 20 pontos de venda no próximo mês",
+                    "objetivo": "100",
+                    "nome": "PAPELITO TRADICIONAL KING SIZE - 50 LIVRETOS",
+                    "vlrvendas": "80",
+
+                },
+                {
+
+                    "compromisso": "Implementar programa de fidelidade para clientes recorrentes até o final do trimestre",
+                    "objetivo": "400000",
+                    "nome": "KEEP ROLLING CLASSIC KING SIZE - 40 LIVRETOS",
+                    "vlrvendas": "331559.4",
+                },
+                
+
+            ],
+
+        };
+
+
+
+        jsonData.titulo.forEach((item, index) => {
+            const narrativa = item.barraprogresso;
+
+            // Incrementando o índice (index + 1) para evitar que comece do 0
+            const i = index + 1;
+
+
+            document.getElementById('titulonarrativa' + i).textContent = narrativa;
+        });
+
+
+        jsonData.salesData0.forEach((item, index) => {
+            const compromisso = item.compromisso;
+
+            // Incrementando o índice (index + 1) para evitar que comece do 0
+            const i = index + 1;
+
+
+            document.getElementById('textocompromissoA' + i).textContent = compromisso;
+        });
+
+        jsonData.salesData1.forEach((item, index) => {
+            const compromisso = item.compromisso;
+
+            // Incrementando o índice (index + 1) para evitar que comece do 0
+            const i = index + 1;
+
+
+            document.getElementById('textocompromissoB' + i).textContent = compromisso;
+        });
+
+        jsonData.salesData2.forEach((item, index) => {
+                const compromisso = item.compromisso;
+
+                // Incrementando o índice (index + 1) para evitar que comece do 0
+                const i = index + 1;
+
+
+                document.getElementById('textocompromissoC' + i).textContent = compromisso;
+            });
+
+       let AsomaPorcentagens = 0;
+
+        jsonData.salesData0.forEach((item, index) => {
+            const i = index + 1;
+
+            // Atualiza a barra de progresso com a porcentagem calculada usando Semantic UI
+            $(`#AprogressBar${i}`).progress({
+                percent: (item.vlrvendas / item.objetivo) * 100
+            });
+
+            // Atualiza o texto da barra de progresso com a porcentagem completa
+            let mediapro = `${Math.floor((item.vlrvendas / item.objetivo) * 100)}%`;
+            $(`#AprogressText${i}`).text(mediapro);
+
+            // Adiciona à soma das porcentagens
+            AsomaPorcentagens += (item.vlrvendas / item.objetivo) * 100;
+        });
+
+        // Calcula a média das porcentagens
+        const AmediaPorcentagens = AsomaPorcentagens / jsonData.salesData0.length;
+
+        // Atualiza a barra de progresso para exibir a média das porcentagens
+        $('#AmediaProgressBar').progress({
+            percent: AmediaPorcentagens
+        });
+        // Atualiza o texto da barra de progresso de média com a porcentagem completa
+        let mediaText = `${Math.floor(AmediaPorcentagens)}%`;
+        $('#AmediaProgressText').text(mediaText);
+
+
+
+
+
+
+        // Variável para armazenar a soma das porcentagens
+        let BsomaPorcentagens = 0;
+
+            jsonData.salesData1.forEach((item, index) => {
+                const i = index + 1;
+
+                // Atualiza a barra de progresso com a porcentagem calculada usando Semantic UI
+                $(`#BprogressBar${i}`).progress({
+                    percent: (item.vlrvendas / item.objetivo) * 100
+                });
+
+                // Atualiza o texto da barra de progresso com a porcentagem completa
+                let Bmediapro = `${Math.floor((item.vlrvendas / item.objetivo) * 100)}%`;
+                $(`#BprogressText${i}`).text(Bmediapro);
+
+                // Adiciona à soma das porcentagens
+                BsomaPorcentagens += (item.vlrvendas / item.objetivo) * 100;
+            });
+
+            // Calcula a média das porcentagens
+            const BmediaPorcentagens = BsomaPorcentagens / jsonData.salesData1.length;
+
+            // Atualiza a barra de progresso para exibir a média das porcentagens
+            $('#BmediaProgressBar').progress({
+                percent: BmediaPorcentagens
+            });
+            // Atualiza o texto da barra de progresso de média com a porcentagem completa
+            let BmediaText = `${Math.floor(BmediaPorcentagens)}%`;
+            $('#BmediaProgressText').text(BmediaText);
+
+
+
+        let CsomaPorcentagens = 0;
+
+            jsonData.salesData2.forEach((item, index) => {
+                const i = index + 1;
+
+                // Atualiza a barra de progresso com a porcentagem calculada usando Semantic UI
+                $(`#CprogressBar${i}`).progress({
+                    percent: (item.vlrvendas / item.objetivo) * 100
+                });
+
+                // Atualiza o texto da barra de progresso com a porcentagem completa
+                let Cmediapro = `${Math.floor((item.vlrvendas / item.objetivo) * 100)}%`;
+                $(`#CprogressText${i}`).text(Cmediapro);
+
+                // Adiciona à soma das porcentagens
+                CsomaPorcentagens += (item.vlrvendas / item.objetivo) * 100;
+            });
+
+            // Calcula a média das porcentagens
+            const CmediaPorcentagens = CsomaPorcentagens / jsonData.salesData2.length;
+
+            // Atualiza a barra de progresso para exibir a média das porcentagens
+            $('#CmediaProgressBar').progress({
+                percent: CmediaPorcentagens
+            });
+            // Atualiza o texto da barra de progresso de média com a porcentagem completa
+            let CmediaText = `${Math.floor(CmediaPorcentagens)}%`;
+            $('#CmediaProgressText').text(CmediaText);
+
+    </script>
+        <!-- JS do Bootstrap (jQuery e Popper.js são necessários para alguns recursos) -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    </body>
+
+</html>

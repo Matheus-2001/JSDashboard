@@ -1,0 +1,399 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+/**********************************/
+/* 0. Variáveis
+/* 1. Estilos gerais
+/* 2. Navbar
+/* 3. Loading
+/* 4. Container
+/* 5. State Select
+/* 6. Status
+/* 7. Data Box
+/* 8. Footer
+/**********************************/
+
+/**********************************/
+/* 0. Variáveis
+/**********************************/
+
+[data-theme="light"] {
+    --clr-background: #F5F5F5;
+    --clr-font: #111111;
+    --clr-papelito: #00723a;
+    --clr-card: #FEE7E7;
+    --clr-switch-track: #AABBCC;
+    --clr-link: #3333FF;
+    --clr-confirmed: #D21212;
+    --clr-deaths: #223344;
+    --clr-vaccinated-1: #0000C7;
+    --clr-vaccinated-2: #117711;
+
+    --ff: "Cairo", sans-serif;
+    --ts-caption: 600 1.8rem/1 var(--ff);
+    --ts-normal-text: 400 1.6rem/1.4 var(--ff);
+    --ts-normal-semibold: 600 1.6rem/1.4 var(--ff);
+    --ts-normal-BoxGraTitle: 900 1rem/1.4 var(--ff);
+
+
+    --transition: all 0.2s linear;
+    --shadow-card: 5px 5px 30px 0 rgba(51, 51, 51, 20%);
+}
+
+
+/**********************************/
+/* 1. Estilos gerais
+/**********************************/
+
+
+.CenterContainerNavbar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.SizedBox {
+    height: 30px;
+}
+
+.SizedBoxW {
+    width: 30px;
+}
+
+
+/**********************************/
+/* 2. Navbar
+/**********************************/
+.navbar {
+    display: flex;
+    align-items: center;
+    background: #fffef4;
+    height: 3rem;
+    padding-left: 3.5rem;
+}
+
+.linhaNavbar {
+    background-color: #cfcfcf;
+    width: 100%;
+    min-height: 0.3rem;
+}
+
+.imgLogo {
+    position: absolute;
+    left: 60px;
+    max-width: 7rem;
+    /* Garante que a imagem não ultrapasse o tamanho do contêiner pai */
+    height: auto;
+    /* Mantém a proporção da imagem */
+}
+
+.dashboard-title {
+
+    color: var(--clr-papelito);
+    font: var(--ts-normal-semibold);
+}
+
+/**********************************/
+/* 3. Barra de progresso
+/**********************************/
+
+.progress-container {
+
+    width: 20rem;
+    max-width: 400px;
+    background-color: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.progress-containerSub {
+
+    width: 12rem;
+    max-width: 400px;
+    background-color: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.complproW {
+    width: 30rem;
+}
+
+.complproW3 {
+    width: 60rem;
+    max-width: 1000px !important;
+}
+
+
+.progress-bar {
+
+    height: 20px;
+    width: 0;
+
+    border-radius: 8px;
+    transition: width 0.5s ease;
+}
+
+.ui.progress:last-child {
+    margin: 0px !important;
+}
+
+.ui.progress:last-child omplproH {
+    height: 100px;
+}
+
+
+.ui.progress .bar {
+    height: 100% !important;
+}
+
+.ProPorcenSub {
+    display: flex;
+    flex-direction: row;
+}
+
+.progress-text {
+
+    font: var(--ts-normal-BoxGraTitle);
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+}
+
+.progress-textsub {
+    font: var(--ts-normal-BoxGraTitle);
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    font-size: 8px;
+}
+
+
+
+
+#labelpro {
+
+    height: 10px;
+    font-size: 8px;
+    text-align: center;
+    color: #0000C7;
+}
+
+.SubProBar {
+    border: 1px solid #cacaca2f;
+    border-radius: 5px;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin: 0.5rem 1.25rem 0.5rem 1.25rem;
+    padding: 0.5rem 1.25rem 0.5rem 1.25rem;
+
+    /* ou margin-bottom: 0; dependendo da orientação do seu layout */
+
+}
+
+.Graficolinha {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.myChart {
+    width: 100px;
+}
+
+
+
+
+
+
+/**********************************/
+/* 4. Container
+/**********************************/
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Redimensiona a imagem mantendo a proporção e cobrindo todo o espaço */
+    z-index: -1;
+    /* Coloca a imagem atrás do conteúdo */
+    opacity: 2%;
+}
+
+.bodyContent {
+
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    height: 36rem;
+    padding: 1rem;
+    z-index: 1;
+}
+
+.card {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 10px !important;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+
+.BoxGra {
+
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    height: 43rem;
+
+    width: 32rem;
+
+    transition: height 0.3s ease-out;
+    padding: 1rem 0rem 0rem 0rem;
+    margin-bottom: 0.5rem;
+
+}
+
+#meuBotao {
+    height: 47.5rem;
+}
+
+#meuBotao2 {
+
+    width: 65rem !important;
+    height: 25rem !important;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.meuBotao2class {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+
+.BoxGraTitle {
+
+    text-align: center;
+    color: var(--clr-papelito);
+    font: var(--ts-normal-BoxGraTitle);
+    font-size: 14px;
+    padding: 0rem 2.5rem 0rem 2.5rem;
+    margin-bottom: 0px;
+
+}
+
+.BoxGraSubTitle {
+    overflow: hidden;
+    text-align: center;
+    color: var(--clr-font);
+    font: var(--ts-normal-BoxGraTitle);
+    font-weight: 300;
+    font-size: 10px;
+    width: 10rem;
+
+
+}
+
+
+button:focus {
+    outline: none !important;
+}
+
+
+.expand {
+    position: fixed;
+    bottom: 0px;
+    /* ou qualquer outra distância que você preferir */
+    left: 50%;
+    transform: translateX(-50%);
+    border: 0px solid rgba(0, 0, 0, .125) !important;
+    padding-top: 3px;
+    padding-right: 10px;
+
+    display: flex;
+    justify-content: flex-end;
+    background-color: #E3E3E3;
+    width: 100%;
+    height: 30px;
+    align-items: baseline;
+    border-bottom-left-radius: 1.7rem;
+    border-bottom-right-radius: 1.7rem;
+}
+
+.iconSetaBaixo {
+    scale: 1.2;
+    margin-right: 1rem;
+    margin-left: 0.5rem;
+
+}
+
+.MaDeta {
+    font-size: 14px;
+    text-decoration: underline;
+
+}
+
+.dialog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.dialog input {
+    width: 100px;
+}
+
+.dialog .save {
+    color: white;
+    background-color: green;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+/**********************************/
+/* 5. State Select
+/**********************************/
+
+
+
+/**********************************/
+/* 6. Status
+/**********************************/
+
+
+
+/**********************************/
+/* 7. Data Box
+/**********************************/
+
+
+
+/**********************************/
+/* 8. Footer
+/**********************************/
